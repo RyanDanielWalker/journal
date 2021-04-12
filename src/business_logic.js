@@ -11,22 +11,28 @@ Entry.prototype.wordCounter = function () {
   this.wordCount= wordArray.length
 }
 
-Entry.prototype.vowelCounter = function () {
-  const vowelArray = this.content.split("");
-  //string of vowels
-  //for loop of some sort for each letter
-  //check each if vowel string includes that letter
-  //regex: ([aeiouAEIOU])
-  if (vowelArray.includes
-
-
-    const vowels = ["a", "e", "i", "o", "u"]
-    const wordArray = this.content.split(" ")
-    wordArray.forEach(function(element){
-      vowels.forEach(function(vowel){
-        if (element.includes(vowel))
-
-      })
-    })
+Entry.prototype.characterCounter = function () {
+  const textArray = this.content.toLowerCase().split(""); //splitting string into characters
+  const vowels = ["a", "e", "i", "o", "u"];
+  const consonants = /[b-df-hj-np-tv-z]/i;
+  let vowelCount = 0;
+  let consonantCount = 0;
+  console.log(textArray.length);
+  textArray.forEach(function(element){
+    // console.log(vowels.includes(element));
+    if (vowels.includes(element)){
+      vowelCount += 1;
+    } else if (consonants.test(element)) {
+      consonantCount += 1;
+    }
+  });
+  this.vowels = vowelCount;
+  this.consonants = consonantCount;
 }
 
+// const titleInput = "Some stuff";
+// const contentInput = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non nisi est sit amet facilisis magna etiam tempor. Enim neque volutpat ac tincidunt. Sit amet porttitor eget dolor morbi. Vestibulum sed arcu non odio euismod lacinia. Eu ultrices vitae auctor eu augue ut lectus arcu bibendum. At urna condimentum mattis pellentesque id nibh tortor id aliquet. Morbi tempus iaculis urna id volutpat lacus laoreet non.";
+// const entryObject = new Entry(titleInput, contentInput);
+// entryObject.wordCounter();
+// entryObject.characterCounter();
+// console.log(entryObject);
