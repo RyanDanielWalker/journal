@@ -7,7 +7,7 @@
   <title>Journal</title>
 </head>
 <body>
-  <form>
+  <form id="journalForm">
     <div class="form-group">
       <label for="titleInput">Title</label>
       <input type="text" class="form-control" id="titleInput">
@@ -18,5 +18,10 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+  <div id="displayEntry">
+    <h3 id="displayTitle"></h3>
+    <p id="displayMetrics"></p>
+    <p id="displayContent"></p>
+  </div>
 </body>
 </html>

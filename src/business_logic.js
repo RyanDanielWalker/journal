@@ -8,8 +8,8 @@ export function Entry (title, content) {
 
 Entry.prototype.wordCounter = function () {
   const wordArray = this.content.split(" ");
-  this.wordCount= wordArray.length
-}
+  this.wordCount= wordArray.length;
+};
 
 Entry.prototype.characterCounter = function () {
   const textArray = this.content.toLowerCase().split(""); //splitting string into characters
@@ -28,7 +28,7 @@ Entry.prototype.characterCounter = function () {
   });
   this.vowels = vowelCount;
   this.consonants = consonantCount;
-}
+};
 
 Entry.prototype.getTeaser = function() {
   const array = this.content.split(" ");
@@ -40,7 +40,7 @@ Entry.prototype.getTeaser = function() {
     }
   }
   this.teaser = teaserWords.join(" ");
-}
+};
 
 // const titleInput = "Some stuff";
 // const contentInput = "Lorem ipsum dolor sit amet. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non nisi est sit amet facilisis magna etiam tempor. Enim neque volutpat ac tincidunt. Sit amet porttitor eget dolor morbi. Vestibulum sed arcu non odio euismod lacinia. Eu ultrices vitae auctor eu augue ut lectus arcu bibendum. At urna condimentum mattis pellentesque id nibh tortor id aliquet. Morbi tempus iaculis urna id volutpat lacus laoreet non.";
