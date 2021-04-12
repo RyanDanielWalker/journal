@@ -1,0 +1,20 @@
+fucntion Entry {
+  title:
+  content:
+  wordCount:
+  vowels: 0
+  
+}
+
+method to count number of words in Entry
+
+method for number of vowels
+
+method for number of consonants
+
+method to return first sentence or first 8 words
+
+User interface logic
+
+method to pass an entry from an entry field to a displayed page element
+
